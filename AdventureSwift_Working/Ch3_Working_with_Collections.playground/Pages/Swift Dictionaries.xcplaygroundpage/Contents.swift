@@ -35,7 +35,16 @@ blackSmithShop["sword"] = 1000
 print(blackSmithShop)
 
 // casting the values I guess
+// Yeah we are casting the values because `.keys` and `.values` methods do not
+// return array right off the bat, we need to cast the return value to an array
 [String](blackSmithShop.keys)
 [Int](blackSmithShop.values)
 var val: [Int] = [Int](blackSmithShop.values)
 
+var Darray: [[String]] = [
+["hello", "hi", "bonjour"],
+["blah", "yeah"]
+]
+
+var anotherDictionary: [String: Int] = ["hello": 3, "hi": 5]
+[String](anotherDictionary.keys)

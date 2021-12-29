@@ -47,5 +47,16 @@ planetSmash.0
 shieldStomp.damage = 100
 shieldStomp.recharable = planetSmash.rechargeable
 
+var anotherTuple: (name: String, publicStock: Bool, value: Float) = ("GME", true, 45.54)
+anotherTuple.name
+anotherTuple.publicStock
+anotherTuple.value
 
+anotherTuple.value += 5
+anotherTuple.value
+
+var (name, isPublic, value) = anotherTuple
+name
+isPublic
+value
 

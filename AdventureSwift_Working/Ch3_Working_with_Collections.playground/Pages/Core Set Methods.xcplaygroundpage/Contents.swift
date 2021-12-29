@@ -21,11 +21,13 @@ var completedQuests: Set<String> = ["Big Boss", "All-4-one", "The Hereafter"]
 
 // Set operations
 var commonQuests: Set<String> = allQuests.intersection(completedQuests)
+// Remove the common elements between these 2 sets and take an union
 var differenetQuests = allQuests.symmetricDifference(completedQuests)
 var blah = allQuests.union(completedQuests)
-
+// Remove the common elements between 2 sets from allQuests set
 var glah: Set<String> = allQuests.subtracting(completedQuests)
 print(allQuests)
 
 // form<Function> counterparts of above thing can be used to modify the variable I think
 
+var anotherSet: Set<Int> = [1, 2, 3, 4, 54, 5, 6, 6, 6, 6, 6, 7]

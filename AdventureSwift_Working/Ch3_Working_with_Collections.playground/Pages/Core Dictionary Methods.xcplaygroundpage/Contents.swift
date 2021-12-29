@@ -30,6 +30,7 @@ var oldValue = playerStats.updateValue(100, forKey: "mana")
 // playerStats["potions"] = nil
 var removedValue = playerStats.removeValue(forKey: "potions")
 
+playerStats["items"] = 10
 
 print(playerStats)
 

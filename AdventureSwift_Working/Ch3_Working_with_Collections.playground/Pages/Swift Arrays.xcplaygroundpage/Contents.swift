@@ -32,4 +32,9 @@ var mostDifficult: String = levelDifficulty[3]
 levelDifficulty[3] = "Utter Ridiculousness"
 levelDifficulty
 
+var anotherArray: Array<String> = ["hello", String(1), String(2)]
+var yetAnotherArray: Array<Int> = [1, 2, 2, 3, 4, 54, 9]
+var yetAnotherArray2: Array<String> = []
 
+yetAnotherArray2 = ["hi", "helo", "bonjour"]
+yetAnotherArray2.randomElement()

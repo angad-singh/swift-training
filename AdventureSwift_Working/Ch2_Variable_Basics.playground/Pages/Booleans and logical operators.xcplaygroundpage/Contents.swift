@@ -22,3 +22,4 @@ isActive = !isActive
 
 var playerControl = isActive || canMove
 
+var anotherBool: Bool = true
