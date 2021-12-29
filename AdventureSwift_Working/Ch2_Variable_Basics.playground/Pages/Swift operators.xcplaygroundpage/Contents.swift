@@ -30,3 +30,7 @@ var experienceOVerflow = 100 % 90
     Logical operators (!, &&, ||)
     Ranges (1...5 or 1..<5)
 */
+
+print(currentHealth)
+print(experienceOVerflow)
+print(usingMathIRL)

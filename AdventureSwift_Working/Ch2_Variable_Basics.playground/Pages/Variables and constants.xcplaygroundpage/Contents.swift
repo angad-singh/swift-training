@@ -27,6 +27,14 @@ let maxHealth = 100
 Can declare multiple vars on the same line given that they are all the same type like the following:
 */
 var inventoryItems = 5, equipmentSlots = 3, currentGold = 42
-let maxFriends = 9, maxItems = 100
-
 print(maxItems, maxHealth, maxFriends)
+
+let maxFriends = 9, maxItems = 100
+print(inventoryItems, equipmentSlots, currentGold)
+
+inventoryItems = 6
+equipmentSlots = 4
+currentGold = 50
+
+print("After changing values")
+print(inventoryItems, equipmentSlots, currentGold)

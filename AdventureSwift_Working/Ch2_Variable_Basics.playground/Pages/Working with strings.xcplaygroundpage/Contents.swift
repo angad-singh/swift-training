@@ -34,3 +34,7 @@ dialogue.removeFirst()
 print(dialogue.split(separator: ","))
 
 print(dialogue)
+dialogue.append("!")
+print(dialogue)
+dialogue = "t" + dialogue
+print(dialogue)
