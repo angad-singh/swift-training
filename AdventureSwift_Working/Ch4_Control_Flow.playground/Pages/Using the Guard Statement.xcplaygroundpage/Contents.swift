@@ -25,6 +25,7 @@ let currentGold = 16
 
 // Guard statement with for-in loop
 for (item, price) in shopItems {
+    /// kinda like using `return if blah` in Ruby functions
     guard currentGold >= price else {
         print("You can't afford the \(item)")
         continue

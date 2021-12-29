@@ -88,3 +88,14 @@ for armor in armorTypes[..<armorTypes.count] {
 //    this is much more safer and you will always stay in the bounds
     print(armor)
 }
+
+print("-------------------")
+var anotherDict: [String : String] = ["Hi": "Bonjour", "Angad": "Singh", "test": "TEST"]
+
+for (key, value) in anotherDict {
+    if value.count % 2 == 0 {
+        print ("The value(\(value)) for key - \(key) is of even length")
+    } else {
+        print ("The value(\(value)) for key - \(key) is of odd length")
+    }
+}

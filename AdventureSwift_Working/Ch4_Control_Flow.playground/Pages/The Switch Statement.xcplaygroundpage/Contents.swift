@@ -71,6 +71,3 @@ case (let localMP, let localHP) where localMP+localHP > 20:
 default:
     print("Hit the default case there buddy")
 }
-
-
-

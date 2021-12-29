@@ -69,3 +69,17 @@ if let fetchGems = questDirectory["Fetch Gemstones"]?["Objective"] {
 // dictionary and then we try to access the second dictionary. Can also use the
 // excalmation mark (!) to force unwrap the first one if you are sure it exists
 questDirectory["Fetch Gemstones"]?["Test"]
+
+var optional: String? = "present"
+var antoherOptional: Int? = 5
+
+if let unwrappedOptional = optional, let unwrappedAnotherOptional = antoherOptional {
+    print("The var optional and anotherOptional both are present with values \(unwrappedOptional) & \(unwrappedAnotherOptional)")
+} else if let item = optional {
+    print("Optional is \(item)")
+} else if let item = antoherOptional {
+    print("Another Optional is \(item)")
+} else {
+    print("Both vars are nil!")
+}
+

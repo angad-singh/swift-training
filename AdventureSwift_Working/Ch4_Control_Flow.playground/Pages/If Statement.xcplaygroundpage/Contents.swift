@@ -32,3 +32,13 @@ if hp <= 50 {
 if hp > 90 || hp <= maxHP {
     print("You are doing just fine!")
 }
+
+var val: Int = 101
+
+if val < 100 {
+    print("The value \(val) is less than 100")
+} else if val >= 100 && val < 200 {
+    print("The value \(val) is greater than 100 but less than 200")
+} else {
+    print("The value \(val) is greater than 200")
+}
