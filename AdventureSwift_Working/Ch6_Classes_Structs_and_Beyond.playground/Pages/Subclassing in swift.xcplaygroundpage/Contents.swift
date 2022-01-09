@@ -53,8 +53,32 @@ class Adventurer {
 }
 
 // Subclass
+class Ranger: Adventurer {
+    var classAdvantage: String
+    
+    init(name:String, advantage:String) {
+        self.classAdvantage = advantage
+        // super is referring to Adventurer superclass here. You can access those but a parent class can't access subclases methods
+        // IMPORTANT: you need to initialize the values here first before you call super.init. This order is important
+        super.init(name: name, maxHP: 150)
+    }
+    
+    override class var credo: String {
+        return "To the King!"
+    }
+    
+    override func printStats() {
+        print("\(self.name): Ranger, Advantage: \(self.classAdvantage)")
+    }
+}
 
 
 var player1 = Adventurer(name: "Harrison", maxHP: 99)
 player1.printStats()
 Adventurer.credo
+Ranger.credo
+
+var player2 = Ranger(name: "Angad", advantage: "Master coder")
+player2.printStats()
+player2.maxHealth
+

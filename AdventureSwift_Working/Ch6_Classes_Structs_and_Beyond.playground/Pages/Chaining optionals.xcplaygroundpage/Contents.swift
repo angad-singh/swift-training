@@ -19,6 +19,10 @@ struct Item {
 
 struct Owner {
     var name: String
+    
+    func returnOwnerInfo() -> String {
+        return "\(name) is the current owner!"
+    }
 }
 
 var questDirectory = [
@@ -33,4 +37,27 @@ var questDirectory = [
 ]
 
 // Creating the chain
+var rareDagger = Item(description: "A unique dagger of unknown origin", previousOwner: nil)
+var daggerOwner = Owner(name: "Angad")
+rareDagger.previousOwner = daggerOwner
 
+// Can also use this chain to assign values. this only works if there was a previous value.
+// If the value was nil initially then you can't do the below, the chain will break because the current value would be nil
+rareDagger.previousOwner?.name = "Ye Ole thief"
+
+if let owner = rareDagger.previousOwner?.name {
+    print("This item used to be owned by \(owner)")
+} else {
+    print("This item's last owner is unknown...")
+}
+
+// chaining for the fucntion call on previousOwner object
+if let owner = rareDagger.previousOwner?.returnOwnerInfo() {
+    print(owner)
+} else {
+    print("No owner in our record.")
+}
+
+if let gemstoneObjective = questDirectory["Fetch Gemstones"]?["Objective"] {
+    print(gemstoneObjective)
+}

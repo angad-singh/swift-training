@@ -16,18 +16,54 @@
  
  */
 // 1
+class Item {
+    var name: String
+    var price: Int
+// 4
+    var secret: BonusEffect?
 
 // 2
+    init(name: String, price: Int) {
+        self.name = name
+        self.price = price
+    }
+}
 
 // 3
-
-// 4
+struct BonusEffect {
+    var bonus: Int
+}
 
 // 5
-
+class Inventory {
+    var storedItems: Array<Item>
+    
 // 6
+    init(items: Array<Item>) {
+        self.storedItems = items
+    }
+}
 
 // 7
+var bonusEffect = BonusEffect(bonus: 90)
+var item1 = Item(name: "Mjolnir", price: 500)
+var item2 = Item(name: "Vibranium Shield", price: 350)
+item1.secret = bonusEffect
 
 // 8
+var inventory = Inventory(items: [item1, item2])
+if let secret2 = inventory.storedItems[0].secret?.bonus {
+    print(secret2)
+} else if let secret1 = inventory.storedItems[1].secret?.bonus {
+    print(secret1)
+} else {
+    print("No secret found!")
+}
 
+for item in inventory.storedItems {
+    if let secret = item.secret?.bonus {
+        print("The secret of \(item.name) is \(secret) extra power!")
+    } else {
+        print("\(item.name) has no secret bonus :(")
+    }
+}
