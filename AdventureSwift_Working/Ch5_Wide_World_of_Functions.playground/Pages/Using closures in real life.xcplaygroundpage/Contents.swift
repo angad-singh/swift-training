@@ -20,7 +20,35 @@ var highScores = [3412, 0, 1988, 722]
 var partyMembers = ["Harrison", "Steven", "Bob the Noob"]
 
 // Existing functions with closures
+/// sorted takes in a closure
+var ascendingSort = highScores.sorted { (firstValue: Int, secondValue: Int) -> Bool in
+    return firstValue < secondValue
+}
 
+print(ascendingSort)
 
 // Using custom closures with functions
+func activeMembers(completion: ([String]) -> Void) {
+    completion(partyMembers)
+}
 
+activeMembers { (members: Array<String>) -> Void in
+    for name in members {
+        print("\(name) is active!")
+    }
+}
+
+/// The first `->` is to declare the return type of the function, which is a closure that starts after the first `->`
+/// the second `->` is to denote the return type of the closure
+func activeMembers (members: Array<String>) -> () -> Void {
+    let completion: () -> Void = {
+        for name in members {
+            print("\(name) is present!")
+        }
+    }
+    
+    return completion
+}
+
+var closureReturn: () -> Void = activeMembers(members: partyMembers)
+closureReturn()

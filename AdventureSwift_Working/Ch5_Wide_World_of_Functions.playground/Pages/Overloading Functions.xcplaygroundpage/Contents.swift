@@ -14,7 +14,22 @@
 
  */
 // Base function
-
+func attackEnemy() {
+    print("Executing default attack...")
+}
 
 // Overloaded functions
+func attackEnemy(damage: Int) {
+    print ("Attacking for \(damage)")
+}
 
+func attackEnemy(damage: Double, weapon: String) -> Bool {
+    let attackSuccess: Bool = true
+    print ("Attacking enemy for \(damage) with \(weapon)")
+    
+    return attackSuccess
+}
+
+attackEnemy()
+attackEnemy(damage: 59)
+attackEnemy(damage: 56.89, weapon: "Mjolnir")
